@@ -11,7 +11,6 @@ function ProductInfo({product}) {
   const router = useRouter()
   const path = usePathname()
   const {cart,setCart} = useContext(CartContext)
-  console.log("product",product)
   const handleAddToCart = ()=>{
     if(!user)
     {

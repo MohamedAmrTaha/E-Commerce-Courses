@@ -18,14 +18,12 @@ function ProductDetails() {
     },[params.productId])
     const getProductById_ = ()=>{
         ProductApis.getProductById(params.productId).then(res=>{
-            console.log('product item',res.data.data[0])
             setDetails(res.data.data[0])
             getProductsByCategory_(res.data.data)
         })
     }
     const getProductsByCategory_ = (product)=>{
         ProductApis.getProductsByCategory(product[0].category).then(res=>{
-            console.log(res.data.data)
             setProductsList(res.data.data)
         })
     }
